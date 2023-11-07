@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Barlow Semi Condensed;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem 10rem;
+    background-color: #edf2fb;
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    "one one two five"
+    "three four four five";
+    gap: 1rem;
+    background-color: #edf2fb;
+}
+.comment1,
+.comment2,
+.comment3,
+.comment4,
+.comment5{
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 2.5rem, 3.75rem, 3rem rgba(0, 0, 0, 0.1);
+}
+.comment1 {
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    color: rgb(255, 255, 255, 0.8);
+}
+.comment2{
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+    color: rgb(255, 255, 255, 0.8);
+}
+.comment3{
+    grid-area: three;
+    background-color: hsl(0, 0%, 100%);
+}
+.comment4 {
+    grid-area: four; 
+    background-color: hsl(219, 29%, 14%);
+    color: rgb(255, 255, 255, 0.8);
+}
+.comment5 {
+    grid-area: five;  
+    background-color: hsl(0, 0%, 100%);
+}
+.profile{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.profile img {
+    max-width: 100%;
+    height: 56px; 
+    border-radius: 50%;
+}
+.profile h1{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+h2{
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+p{
+    color: rgba(204, 204, 204, 0.6)
+}
+.comment3 p{
+   color: rgb(0, 0, 0, 0.7);
+}
+.comment5 p{
+    color: rgb(0, 0, 0, 0.7);
+}
+
+@media (max-width:930px) {
+    body{
+        padding: 5rem 2rem;
+    }
+    main{
+        grid-template-areas: 
+        "one one"
+        "two five"
+        "three five"
+        "four four";
+    }
+}
+
+@media (max-width:600px){
+    body{
+        padding: 0 1rem;
+    }
+    main{
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
+    
+}
